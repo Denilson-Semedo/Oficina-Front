@@ -5,6 +5,8 @@
  */
 package oficina;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Denilson
@@ -17,6 +19,8 @@ public class TelaManutencao2 extends javax.swing.JFrame {
     public TelaManutencao2() {
         initComponents();
     }
+    
+    TelaManutencao2NovaEntrada telaManutencao2NovaEntrada = new TelaManutencao2NovaEntrada();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,6 +31,7 @@ public class TelaManutencao2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Entrada = new javax.swing.JPopupMenu();
         fundo = new javax.swing.JPanel();
         SidePane = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -105,7 +110,7 @@ public class TelaManutencao2 extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Tarefas");
+        jLabel4.setText("Serviços");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -116,7 +121,7 @@ public class TelaManutencao2 extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel4)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,6 +254,11 @@ public class TelaManutencao2 extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(8, 32, 50));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Nova entrada");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -338,11 +348,19 @@ public class TelaManutencao2 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        telaManutencao2NovaEntrada.setVisible(true);
+        telaManutencao2NovaEntrada.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        //Abrir POPUP
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -387,6 +405,7 @@ public class TelaManutencao2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPopupMenu Entrada;
     private javax.swing.JPanel SidePane;
     private javax.swing.JPanel fundo;
     private javax.swing.JButton jButton2;
