@@ -98,6 +98,7 @@ public class TelaManutencao extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(8, 32, 50));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 47));
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/people.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N

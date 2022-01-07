@@ -5,7 +5,9 @@
  */
 package oficina;
 
+import java.awt.Color;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -19,7 +21,7 @@ public class TelaManutencao2 extends javax.swing.JFrame {
     public TelaManutencao2() {
         initComponents();
     }
-    
+
     TelaManutencao2NovaEntrada telaManutencao2NovaEntrada = new TelaManutencao2NovaEntrada();
 
     /**
@@ -73,6 +75,11 @@ public class TelaManutencao2 extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(8, 32, 50));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 47));
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1MouseClicked(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/people.png"))); // NOI18N
 
@@ -105,6 +112,11 @@ public class TelaManutencao2 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(8, 32, 50));
         jPanel2.setPreferredSize(new java.awt.Dimension(250, 47));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/people.png"))); // NOI18N
 
@@ -137,6 +149,11 @@ public class TelaManutencao2 extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(8, 32, 50));
         jPanel3.setPreferredSize(new java.awt.Dimension(250, 47));
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/people.png"))); // NOI18N
 
@@ -169,6 +186,11 @@ public class TelaManutencao2 extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(0, 74, 96));
         jPanel4.setPreferredSize(new java.awt.Dimension(250, 47));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/people.png"))); // NOI18N
 
@@ -201,6 +223,11 @@ public class TelaManutencao2 extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(8, 32, 50));
         jPanel5.setPreferredSize(new java.awt.Dimension(250, 47));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/people.png"))); // NOI18N
 
@@ -250,6 +277,7 @@ public class TelaManutencao2 extends javax.swing.JFrame {
         jLabel14.setText("Estado");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendente", "Em manutenção" }));
+        jComboBox2.setBorder(null);
 
         jButton2.setBackground(new java.awt.Color(8, 32, 50));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -362,6 +390,59 @@ public class TelaManutencao2 extends javax.swing.JFrame {
         //Abrir POPUP
     }//GEN-LAST:event_jButton2MouseClicked
 
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        // TODO add your handling code here:
+        setColor(jPanel4);
+        resetColor(jPanel1);
+        resetColor(jPanel2);
+        resetColor(jPanel3);
+        resetColor(jPanel5);
+    }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        // TODO add your handling code here:
+        setColor(jPanel1);
+        resetColor(jPanel2);
+        resetColor(jPanel3);
+        resetColor(jPanel4);
+        resetColor(jPanel5);
+    }//GEN-LAST:event_jPanel1MouseClicked
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        // TODO add your handling code here:
+        setColor(jPanel2);
+        resetColor(jPanel1);
+        resetColor(jPanel3);
+        resetColor(jPanel4);
+        resetColor(jPanel5);
+    }//GEN-LAST:event_jPanel2MouseClicked
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        // TODO add your handling code here:
+        setColor(jPanel3);
+        resetColor(jPanel1);
+        resetColor(jPanel2);
+        resetColor(jPanel4);
+        resetColor(jPanel5);
+    }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+        // TODO add your handling code here:
+        setColor(jPanel5);
+        resetColor(jPanel1);
+        resetColor(jPanel2);
+        resetColor(jPanel3);
+        resetColor(jPanel4);
+        
+    }//GEN-LAST:event_jPanel5MouseClicked
+
+    public void setColor (JPanel panel){
+        panel.setBackground(new Color(0,74,96));
+    }
+    
+    public void resetColor(JPanel panel){
+        panel.setBackground(new Color(8,32,50));
+    }
     /**
      * @param args the command line arguments
      */
@@ -373,7 +454,7 @@ public class TelaManutencao2 extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

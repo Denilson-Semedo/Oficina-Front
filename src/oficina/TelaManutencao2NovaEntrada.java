@@ -7,6 +7,7 @@ package oficina;
 
 import java.awt.Image;
 import java.io.File;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
 /**
@@ -118,8 +119,16 @@ public class TelaManutencao2NovaEntrada extends javax.swing.JFrame {
         File f = chooser.getSelectedFile();
         String filename = f.getAbsolutePath();
         Image getAbsolutePath = null;
-        /*ImageIcon icon = new ImageIcon(filename);
+        /*/ImageIcon icon = new ImageIcon(filename);
         Image image = icon.getImage().getScaledInstance(66,66, Image.SCALE_DEFAULT);*/
+        /*JFileChooser chooser  = new JFileChooser();
+        chooser.showOpenDialog(null);
+        File f = chooser.getSelectedFile();
+        String filename = f.getAbsolutePath();
+        Image getAbsolutePath = null;
+        ImageIcon icon = new ImageIcon(filename);
+        Image image = icon.getImage().getScaledInstance(66,66, Image.SCALE_DEFAULT); 
+        jPanel_Foto.setIcon(icon);*/
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
