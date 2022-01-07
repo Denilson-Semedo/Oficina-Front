@@ -47,16 +47,22 @@ public class Manutencao extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(1110, 1024));
         setPreferredSize(new java.awt.Dimension(1110, 1024));
 
+        jTabbedPane1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+
         jPanel6.setBackground(new java.awt.Color(250, 251, 251));
 
+        jLabel14.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
         jLabel14.setText("Estado");
 
+        jComboBox2.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendente", "Em manutenção" }));
         jComboBox2.setBorder(null);
 
         jButton2.setBackground(new java.awt.Color(8, 32, 50));
+        jButton2.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Nova entrada");
+        jButton2.setBorder(null);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -77,7 +83,7 @@ public class Manutencao extends javax.swing.JPanel {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 673, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 668, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46))
         );
@@ -91,7 +97,7 @@ public class Manutencao extends javax.swing.JPanel {
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addContainerGap(303, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("ENTRADAS", jPanel6);
@@ -113,7 +119,7 @@ public class Manutencao extends javax.swing.JPanel {
 
         jSeparator1.setForeground(new java.awt.Color(196, 196, 196));
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
         jLabel12.setText("Manutenção");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -137,9 +143,9 @@ public class Manutencao extends javax.swing.JPanel {
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(465, Short.MAX_VALUE))
+                .addContainerGap(470, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

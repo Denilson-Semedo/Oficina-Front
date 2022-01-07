@@ -44,23 +44,26 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
         jLabel15.setText("Estado do carro");
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
         jLabel16.setText("Selecionar Marcação");
 
+        jComboBox1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Marcação 1", "Marcação 2", "Marcação 3", "Marcação 4" }));
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("Uma Breve Descrição do estado em que se encontra o carro");
         jTextArea1.setToolTipText("Uma Breve Descrição do estado em que se encontra o carro");
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
         jLabel17.setText("Carregar Fotos");
 
+        jToggleButton1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
         jToggleButton1.setText("Foto do veiculo");
         jToggleButton1.setPreferredSize(new java.awt.Dimension(110, 29));
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
