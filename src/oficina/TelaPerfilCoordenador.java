@@ -80,7 +80,6 @@ public class TelaPerfilCoordenador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setPreferredSize(new java.awt.Dimension(1360, 571));
         setSize(new java.awt.Dimension(500, 500));
 
         fundo.setBackground(new java.awt.Color(250, 251, 251));
@@ -342,7 +341,6 @@ public class TelaPerfilCoordenador extends javax.swing.JFrame {
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel19)
                             .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(0, 0, 0)
                                 .addComponent(jPanel_Foto, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
