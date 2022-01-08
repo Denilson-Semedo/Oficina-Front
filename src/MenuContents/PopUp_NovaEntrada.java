@@ -41,8 +41,9 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
+        setBackground(new java.awt.Color(250, 251, 251));
 
         jLabel15.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
         jLabel15.setText("Estado do carro");
