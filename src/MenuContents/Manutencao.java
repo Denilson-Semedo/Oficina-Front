@@ -250,6 +250,16 @@ public class Manutencao extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        /*String path = "";
+        JFileChooser j = new JFileChooser();
+        j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int x;
+        x = j.showSaveDialog(this);
+        
+        if(x == JFileChooser.APPROVE_OPTION){
+            path=j.getSelectedFile().getPath();
+        }*/
+        new CreatePDF();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
