@@ -22,7 +22,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public TelaPrincipal() {
         initComponents();
         
-        new SwitchMenu(ContentPane, new Perfil());
+        new SwitchMenu(ContentPane, new Manutencao());
     }
 
     //TelaManutencao2NovaEntrada telaManutencao2NovaEntrada = new TelaManutencao2NovaEntrada();
@@ -324,7 +324,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel3);
         resetColor(jPanel4);
         resetColor(jPanel5);
-        //new SwitchMenu(ContentPane, new Servicos());
+        new SwitchMenu(ContentPane, new servicos());
     }//GEN-LAST:event_jPanel2MouseClicked
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked

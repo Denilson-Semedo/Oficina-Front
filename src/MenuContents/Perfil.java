@@ -333,7 +333,7 @@ public class Perfil extends javax.swing.JPanel {
         String filename = f.getAbsolutePath();
         Image getAbsolutePath = null;
         ImageIcon icon = new ImageIcon(filename);
-        Image image = icon.getImage().getScaledInstance(66,66, Image.SCALE_DEFAULT);
+        Image image = icon.getImage().getScaledInstance(66,66, Image.SCALE_AREA_AVERAGING);
         jPanel_Foto.setIcon(icon);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 

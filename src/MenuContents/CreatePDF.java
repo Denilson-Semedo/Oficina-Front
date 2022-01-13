@@ -41,7 +41,7 @@ public class CreatePDF {
             pdf.add(logo);
             
             //add paragrafo
-            pdf.add(new Paragraph("\nMorada: Praia (Palmarejo Grande)                                                          Denilson Semedo Tavares"));
+            pdf.add(new Paragraph("\nMorada: Praia (Palmarejo Grande)                                                           Denilson Semedo Tavares"));
             pdf.add(new Paragraph("Telef./Fax: Praia-2609000/2609020                                                          NIF:148484816"));
             pdf.add(new Paragraph("NIF: 551773529"));
             pdf.add(new Paragraph("\n\nSERVIÇO                                                                                                                         PREÇO"));
@@ -49,9 +49,9 @@ public class CreatePDF {
             pdf.add(new Paragraph("Lavagem..........................................................................................................................500 CVE"));
             pdf.add(new Paragraph("Trocar Pneu.....................................................................................................................9.000 CVE"));
             pdf.add(new Paragraph("\nTOTAL.............................................................................................................................21.500 CVE"));
-            pdf.add(new Paragraph("\nextenso:CINCO MIL ESCUDOS CVE"));
+            pdf.add(new Paragraph("Extenso:...........................................................VINTE E UM MIL E QUINHENTOS ESCUDOS CVE"));
             
-            pdf.add(new Paragraph("Nº fatura:00001                Data emissão:10/01/2022                Data validade:10/02/2022"));
+            pdf.add(new Paragraph("\n\nNº fatura:00001                  Data emissão:10/01/2022                  Data validade:10/02/2022"));
             
         }catch(IOException e){
             e.printStackTrace();

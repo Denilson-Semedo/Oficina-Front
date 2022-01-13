@@ -259,7 +259,7 @@ public class Manutencao extends javax.swing.JPanel {
         if(x == JFileChooser.APPROVE_OPTION){
             path=j.getSelectedFile().getPath();
         }*/
-        new CreatePDF();
+        new PopUp_Saida().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
