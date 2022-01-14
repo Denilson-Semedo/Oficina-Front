@@ -64,9 +64,9 @@ public class Mecanicos extends javax.swing.JPanel {
         jScrollPane3.setViewportView(jTable3);
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
-        jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 12)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Adicionar Mecânico");
+        jButton4.setText("Novo Mecânico");
         jButton4.setBorder(null);
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

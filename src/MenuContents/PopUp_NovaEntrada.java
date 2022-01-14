@@ -53,26 +53,26 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(250, 251, 251));
 
-        jLabel15.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel15.setText("Observação");
 
-        jLabel16.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel16.setText("Selecionar Marcação");
 
-        jComboBox1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Marcação 1", "Marcação 2", "Marcação 3", "Marcação 4" }));
 
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("Uma Breve Descrição do estado do carro");
         jTextArea1.setToolTipText("Uma Breve Descrição do estado em que se encontra o carro");
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel17.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel17.setText("Foto da Parte Frente");
 
-        jToggleButton1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jToggleButton1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jToggleButton1.setText("Caregar foto");
         jToggleButton1.setPreferredSize(new java.awt.Dimension(110, 29));
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +82,7 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
-        jButton4.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Concluir");
         jButton4.setBorder(null);
@@ -97,10 +97,10 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel18.setText("Foto Lateral");
 
-        jToggleButton2.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jToggleButton2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jToggleButton2.setText("Caregar foto");
         jToggleButton2.setPreferredSize(new java.awt.Dimension(110, 29));
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +109,7 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton3.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jToggleButton3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jToggleButton3.setText("Caregar foto");
         jToggleButton3.setPreferredSize(new java.awt.Dimension(110, 29));
         jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -118,17 +118,17 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
             }
         });
 
-        jLabel19.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel19.setText("Foto da Parte Atrás");
 
         jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jTextArea2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextArea2.setRows(5);
         jTextArea2.setText("registo de eventuais riscos e outras situações ");
         jTextArea2.setToolTipText("Uma Breve Descrição do estado em que se encontra o carro");
         jScrollPane2.setViewportView(jTextArea2);
 
-        jLabel20.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel20.setText("Riscos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -144,9 +144,9 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(91, 91, 91)
+                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel19)
                             .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -163,7 +163,7 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel20)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +186,7 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
                         .addComponent(jLabel19)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(jLabel20))
@@ -196,7 +196,7 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();

@@ -58,15 +58,15 @@ public class Manutencao extends javax.swing.JPanel {
 
         jPanel6.setBackground(new java.awt.Color(250, 251, 251));
 
-        jLabel14.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel14.setText("Estado");
 
-        jComboBox2.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jComboBox2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendente", "Em manutenção", "Concluido" }));
         jComboBox2.setBorder(null);
 
         jButton2.setBackground(new java.awt.Color(8, 32, 50));
-        jButton2.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Nova entrada");
         jButton2.setBorder(null);
@@ -81,6 +81,7 @@ public class Manutencao extends javax.swing.JPanel {
             }
         });
 
+        jTable1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -128,10 +129,10 @@ public class Manutencao extends javax.swing.JPanel {
 
         jPanel7.setBackground(new java.awt.Color(250, 251, 251));
 
-        jLabel15.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel15.setText("Data");
 
-        jComboBox3.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jComboBox3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendente", "Em manutenção" }));
         jComboBox3.setBorder(null);
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +142,7 @@ public class Manutencao extends javax.swing.JPanel {
         });
 
         jButton3.setBackground(new java.awt.Color(8, 32, 50));
-        jButton3.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Nova Saída");
         jButton3.setBorder(null);
@@ -156,6 +157,7 @@ public class Manutencao extends javax.swing.JPanel {
             }
         });
 
+        jTable2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -203,7 +205,7 @@ public class Manutencao extends javax.swing.JPanel {
 
         jSeparator1.setForeground(new java.awt.Color(196, 196, 196));
 
-        jLabel12.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Quicksand Medium", 0, 24)); // NOI18N
         jLabel12.setText("Manutenção");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -229,7 +231,7 @@ public class Manutencao extends javax.swing.JPanel {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(470, Short.MAX_VALUE))
+                .addContainerGap(473, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

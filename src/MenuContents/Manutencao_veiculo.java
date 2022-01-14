@@ -57,43 +57,43 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
 
         jSeparator1.setForeground(new java.awt.Color(196, 196, 196));
 
-        jLabel12.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Quicksand Medium", 0, 24)); // NOI18N
         jLabel12.setText("Manutenção >");
 
-        jLabel14.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel14.setText("Estado");
 
-        jComboBox1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendente", "Em manutenção" }));
 
-        jLabel31.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel31.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel31.setText("Coordenador");
 
-        jLabel32.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel32.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel32.setText("icon");
 
-        jLabel33.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel33.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel33.setText("Isabelle Tostões");
 
-        jLabel34.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel34.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel34.setText("Veículo");
 
-        jLabel35.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel35.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel35.setText("ST-00-AA");
 
-        jLabel37.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel37.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel37.setText("Cliente");
 
-        jLabel36.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel36.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel36.setText("Denilson Tavares");
 
-        jLabel39.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel39.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel39.setText("Cliente");
 
-        jLabel38.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jLabel38.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel38.setText("Denilson Tavares");
 
-        jTable1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -117,7 +117,7 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
         jTable1.setSelectionBackground(new java.awt.Color(204, 204, 204));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel1.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Quicksand Medium", 0, 24)); // NOI18N
         jLabel1.setText("ST-00-AA");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -144,7 +144,7 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
                             .addComponent(jLabel36)
                             .addComponent(jLabel39)
                             .addComponent(jLabel38))
-                        .addContainerGap(105, Short.MAX_VALUE))
+                        .addContainerGap(74, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jSeparator1)
@@ -189,7 +189,7 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel38))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(416, Short.MAX_VALUE))
+                .addContainerGap(419, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

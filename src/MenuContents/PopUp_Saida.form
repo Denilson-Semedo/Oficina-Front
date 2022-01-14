@@ -30,14 +30,6 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane3" min="-2" pref="650" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
@@ -50,6 +42,13 @@
                           <Component id="jComboBox1" alignment="0" min="-2" pref="650" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane3" alignment="0" min="-2" pref="650" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -71,7 +70,7 @@
                   <Component id="jButton4" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
                   <Component id="jButton5" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -80,7 +79,7 @@
     <Component class="javax.swing.JLabel" name="jLabel16">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="15" style="0"/>
+          <Font name="Quicksand Medium" size="15" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Manuten&#xe7;&#xf5;es concluidas"/>
       </Properties>
@@ -88,7 +87,7 @@
     <Component class="javax.swing.JComboBox" name="jComboBox1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="12" style="0"/>
+          <Font name="Quicksand Medium" size="15" style="0"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -109,7 +108,7 @@
           <Color blue="32" green="20" red="8" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="12" style="0"/>
+          <Font name="Quicksand Medium" size="15" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -127,7 +126,7 @@
     <Component class="javax.swing.JLabel" name="jLabel20">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="15" style="0"/>
+          <Font name="Quicksand Medium" size="15" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Estado do carro"/>
       </Properties>
@@ -153,7 +152,7 @@
           <Color blue="32" green="20" red="8" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Noto Sans" size="12" style="0"/>
+          <Font name="Quicksand Medium" size="15" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>

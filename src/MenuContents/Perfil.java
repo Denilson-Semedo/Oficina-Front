@@ -62,21 +62,22 @@ public class Perfil extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(1110, 1024));
         setPreferredSize(new java.awt.Dimension(1110, 1024));
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Quicksand Medium", 0, 24)); // NOI18N
         jLabel12.setText("Perfil");
 
         jSeparator1.setForeground(new java.awt.Color(196, 196, 196));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Quicksand Medium", 0, 18)); // NOI18N
         jLabel13.setText("Informação");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(196, 196, 196));
         jLabel14.setText("Sua informação pessoal");
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setPreferredSize(new java.awt.Dimension(146, 100));
 
+        jTextField1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextField1.setText("Denilson Tavares");
         jTextField1.setPreferredSize(new java.awt.Dimension(103, 42));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -85,10 +86,13 @@ public class Perfil extends javax.swing.JPanel {
             }
         });
 
+        jLabel15.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel15.setText("Nome");
 
+        jLabel17.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel17.setText("Telefone");
 
+        jTextField3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextField3.setText("+2389863786");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +100,7 @@ public class Perfil extends javax.swing.JPanel {
             }
         });
 
+        jTextField4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextField4.setText("Calabaceira");
         jTextField4.setPreferredSize(new java.awt.Dimension(76, 42));
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -104,12 +109,15 @@ public class Perfil extends javax.swing.JPanel {
             }
         });
 
+        jLabel18.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel18.setText("Morada");
 
+        jLabel19.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel19.setText("Foto");
 
         jPanel_Foto.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jToggleButton1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jToggleButton1.setText("Alterar Foto");
         jToggleButton1.setPreferredSize(new java.awt.Dimension(110, 29));
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -132,8 +140,8 @@ public class Perfil extends javax.swing.JPanel {
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(jPanel_Foto, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(382, 444, Short.MAX_VALUE))
+                                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(427, 427, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel10Layout.createSequentialGroup()
@@ -173,7 +181,7 @@ public class Perfil extends javax.swing.JPanel {
                             .addComponent(jLabel17))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(25, Short.MAX_VALUE))
+                        .addContainerGap(16, Short.MAX_VALUE))
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGap(88, 88, 88)
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -182,24 +190,27 @@ public class Perfil extends javax.swing.JPanel {
 
         jSeparator2.setForeground(new java.awt.Color(196, 196, 196));
 
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Quicksand Medium", 0, 18)); // NOI18N
         jLabel20.setText("Trocar Palvra-Passe");
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(196, 196, 196));
         jLabel16.setText("Deixe em branco caso não queira trocar");
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setPreferredSize(new java.awt.Dimension(146, 100));
 
+        jLabel22.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel22.setText("Palavra-Passe Actual");
 
+        jTextField5.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
             }
         });
 
+        jTextField6.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextField6.setPreferredSize(new java.awt.Dimension(76, 42));
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,10 +218,13 @@ public class Perfil extends javax.swing.JPanel {
             }
         });
 
+        jLabel23.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel23.setText("Nova Palavra-Passe");
 
+        jLabel24.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel24.setText("Confirmar Palavra-Passe");
 
+        jTextField7.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextField7.setPreferredSize(new java.awt.Dimension(76, 42));
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,7 +273,7 @@ public class Perfil extends javax.swing.JPanel {
                                 .addComponent(jLabel23))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -275,7 +289,7 @@ public class Perfil extends javax.swing.JPanel {
                             .addComponent(jLabel13)
                             .addComponent(jLabel12)
                             .addComponent(jLabel14))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
                         .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 656, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator2)
                     .addGroup(layout.createSequentialGroup()
@@ -309,7 +323,7 @@ public class Perfil extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel16))
                     .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(418, Short.MAX_VALUE))
+                .addContainerGap(420, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

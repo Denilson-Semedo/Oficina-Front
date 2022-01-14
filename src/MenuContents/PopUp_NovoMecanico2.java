@@ -77,8 +77,10 @@ public class PopUp_NovoMecanico2 extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel20.setText("Confirmar Password");
 
+        jPasswordField1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jPasswordField1.setText("jPasswordField1");
 
+        jPasswordField2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jPasswordField2.setText("jPasswordField1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

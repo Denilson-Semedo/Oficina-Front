@@ -40,11 +40,11 @@ public class PopUp_Concluido extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(250, 251, 251));
 
-        jLabel16.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel16.setText("Operação Concluida!");
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
-        jButton4.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("OK");
         jButton4.setBorder(null);

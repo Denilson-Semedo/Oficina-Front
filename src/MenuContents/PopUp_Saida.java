@@ -45,14 +45,14 @@ public class PopUp_Saida extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(250, 251, 251));
 
-        jLabel16.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel16.setText("Manutenções concluidas");
 
-        jComboBox1.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Marcação 1", "Marcação 2", "Marcação 3", "Marcação 4" }));
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
-        jButton4.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Concluir");
         jButton4.setBorder(null);
@@ -67,7 +67,7 @@ public class PopUp_Saida extends javax.swing.JFrame {
             }
         });
 
-        jLabel20.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel20.setText("Estado do carro");
 
         jTextArea3.setColumns(20);
@@ -75,7 +75,7 @@ public class PopUp_Saida extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextArea3);
 
         jButton5.setBackground(new java.awt.Color(8, 32, 50));
-        jButton5.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Gerar Fatura");
         jButton5.setBorder(null);
@@ -98,12 +98,6 @@ public class PopUp_Saida extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel20)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -112,7 +106,12 @@ public class PopUp_Saida extends javax.swing.JFrame {
                                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel16)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24))))
+                        .addGap(24, 24, 24))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,7 +128,7 @@ public class PopUp_Saida extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
