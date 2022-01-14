@@ -34,7 +34,7 @@ public class CreatePDF {
             //tamanho da pagina do doc
             pdf.setPageSize(PageSize.A4);
             
-            Image logo = Image.getInstance("C:\\Users\\Denilson\\Documents\\Bob\\logo.png");
+            Image logo = Image.getInstance("C:\\Users\\Denilson\\Documents\\NetBeansProjects\\Oficina\\src\\oficina\\imagens\\carLogo2.png");
             logo.scaleToFit(300, 44);
             
             //add imagen no documento
