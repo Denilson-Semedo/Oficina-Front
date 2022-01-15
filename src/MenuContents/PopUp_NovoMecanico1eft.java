@@ -80,6 +80,8 @@ public class PopUp_NovoMecanico1eft extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel23.setText("2 de 3");
 
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(

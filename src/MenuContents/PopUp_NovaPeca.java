@@ -54,6 +54,7 @@ public class PopUp_NovaPeca extends javax.swing.JFrame {
         jTextField1.setText("jTextField1");
 
         jSpinner1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
         jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
