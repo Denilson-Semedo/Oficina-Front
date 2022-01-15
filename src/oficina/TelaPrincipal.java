@@ -344,6 +344,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel2);
         resetColor(jPanel3);
         resetColor(jPanel5);
+        resetColor(jPanel6);
         new SwitchMenu(ContentPane, new Manutencao());
     }//GEN-LAST:event_jPanel4MouseClicked
 
@@ -354,6 +355,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel3);
         resetColor(jPanel4);
         resetColor(jPanel5);
+        resetColor(jPanel6);
         new SwitchMenu(ContentPane, new Mecanicos());
     }//GEN-LAST:event_jPanel1MouseClicked
 
@@ -364,6 +366,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel3);
         resetColor(jPanel4);
         resetColor(jPanel5);
+        resetColor(jPanel6);
         new SwitchMenu(ContentPane, new servicos());
     }//GEN-LAST:event_jPanel2MouseClicked
 
@@ -374,6 +377,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel2);
         resetColor(jPanel4);
         resetColor(jPanel5);
+        resetColor(jPanel6);
         new SwitchMenu(ContentPane, new Perfil());
     }//GEN-LAST:event_jPanel3MouseClicked
 
@@ -384,11 +388,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel2);
         resetColor(jPanel3);
         resetColor(jPanel4);
+        resetColor(jPanel6);
         new SwitchMenu(ContentPane, new pecas());
     }//GEN-LAST:event_jPanel5MouseClicked
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         // TODO add your handling code here:
+        // TODO add your handling code here:
+        setColor(jPanel6);
+        resetColor(jPanel1);
+        resetColor(jPanel2);
+        resetColor(jPanel3);
+        resetColor(jPanel4);
+        resetColor(jPanel5);
+        new SwitchMenu(ContentPane, new Faturas());
     }//GEN-LAST:event_jPanel6MouseClicked
 
     public void setColor (JPanel panel){

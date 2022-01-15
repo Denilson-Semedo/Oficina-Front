@@ -263,7 +263,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         resetColor(jPanel2);
         resetColor(jPanel3);
         resetColor(jPanel5);
-        new SwitchMenu(ContentPane, new Manutencao());
+        new SwitchMenu(ContentPane, new Manutencao_M());
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
@@ -273,7 +273,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         resetColor(jPanel3);
         resetColor(jPanel4);
         resetColor(jPanel5);
-        new SwitchMenu(ContentPane, new servicos());
+        new SwitchMenu(ContentPane, new Tarefas_M());
     }//GEN-LAST:event_jPanel2MouseClicked
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
@@ -293,7 +293,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         resetColor(jPanel2);
         resetColor(jPanel3);
         resetColor(jPanel4);
-        new SwitchMenu(ContentPane, new pecas());
+        new SwitchMenu(ContentPane, new pecas_M());
     }//GEN-LAST:event_jPanel5MouseClicked
 
     public void setColor (JPanel panel){
