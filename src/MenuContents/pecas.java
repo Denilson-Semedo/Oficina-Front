@@ -46,9 +46,10 @@ public class pecas extends javax.swing.JPanel {
 
         jSeparator1.setForeground(new java.awt.Color(196, 196, 196));
 
-        jLabel12.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Quicksand Medium", 0, 24)); // NOI18N
         jLabel12.setText("Peças");
 
+        jTable3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"", null, null},
@@ -63,7 +64,7 @@ public class pecas extends javax.swing.JPanel {
         jScrollPane3.setViewportView(jTable3);
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
-        jButton4.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Adicionar Peça");
         jButton4.setBorder(null);
@@ -108,7 +109,7 @@ public class pecas extends javax.swing.JPanel {
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(389, Short.MAX_VALUE))
+                .addContainerGap(392, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
