@@ -46,10 +46,10 @@ public class servicos extends javax.swing.JPanel {
 
         jSeparator1.setForeground(new java.awt.Color(196, 196, 196));
 
-        jLabel12.setFont(new java.awt.Font("Noto Sans", 0, 24)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Quicksand Medium", 0, 24)); // NOI18N
         jLabel12.setText("Serviços");
 
-        jTable3.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jTable3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"", null, null},
@@ -64,9 +64,9 @@ public class servicos extends javax.swing.JPanel {
         jScrollPane3.setViewportView(jTable3);
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
-        jButton4.setFont(new java.awt.Font("Noto Sans", 0, 12)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Adicionar Peça");
+        jButton4.setText("Adicionar Serviço");
         jButton4.setActionCommand("Adicionar Serviço");
         jButton4.setBorder(null);
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -110,7 +110,7 @@ public class servicos extends javax.swing.JPanel {
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(389, Short.MAX_VALUE))
+                .addContainerGap(392, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -120,7 +120,7 @@ public class servicos extends javax.swing.JPanel {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        new PopUp_NovaPeca().setVisible(true);
+        new PopUp_NovoServico().setVisible(true);
         //new PopUp_NovaPeca().setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
