@@ -205,12 +205,12 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-        JFileChooser chooser  = new JFileChooser();
+       /* JFileChooser chooser  = new JFileChooser();
         chooser.showOpenDialog(null);
         File f = chooser.getSelectedFile();
         String filename = f.getAbsolutePath();
         Image getAbsolutePath = null;
-        /*/ImageIcon icon = new ImageIcon(filename);
+        ImageIcon icon = new ImageIcon(filename);
         Image image = icon.getImage().getScaledInstance(66,66, Image.SCALE_DEFAULT);*/
         /*JFileChooser chooser  = new JFileChooser();
         chooser.showOpenDialog(null);

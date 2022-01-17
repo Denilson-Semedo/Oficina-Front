@@ -68,7 +68,7 @@ public class Faturas extends javax.swing.JPanel {
         jLabel1.setText("Escolher Ano");
 
         Data.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        Data.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2022", "2021", "2020", "2019", "2018", "2017" }));
+        Data.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2022", "2021", "2020" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

@@ -51,7 +51,7 @@ public class Manutencao_M extends javax.swing.JPanel {
         jLabel12.setText("Manutenção");
 
         jComboBox2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendente", "Em manutenção", "Concluido" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Em manutenção", "Concluido" }));
         jComboBox2.setBorder(null);
 
         jLabel14.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N

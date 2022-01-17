@@ -22,7 +22,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
     public TelaPrincipalMecanico() {
         initComponents();
         
-        new SwitchMenu(ContentPane, new Manutencao());
+        new SwitchMenu(ContentPane, new Manutencao_M());
     }
 
     //TelaManutencao2NovaEntrada telaManutencao2NovaEntrada = new TelaManutencao2NovaEntrada();
