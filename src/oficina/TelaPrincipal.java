@@ -7,6 +7,8 @@ package oficina;
 
 import MenuContents.*;
 import java.awt.Color;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -19,9 +21,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form telaPerfilMecanico
      */
+    
+    public void ajustar_logo(){
+        ImageIcon icon = new ImageIcon("C:\\Users\\Denilson\\Documents\\NetBeansProjects\\Oficina\\src\\oficina\\imagens\\carLogo2branco.png");
+        Image img = icon.getImage();
+        Image foto = img.getScaledInstance(jLabel21.getWidth(), jLabel21.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon foto_ajustada = new ImageIcon(foto);
+        jLabel21.setIcon(foto_ajustada);
+    }
+    
     public TelaPrincipal() {
         initComponents();
-        
+        ajustar_logo();
         new SwitchMenu(ContentPane, new Manutencao());
     }
 
@@ -54,11 +65,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         ContentPane = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -258,10 +269,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         SidePane.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, -1, 50));
 
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/logo.png"))); // NOI18N
-        SidePane.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 210, 40));
-
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(156, 156, 156));
         jLabel11.setText("MENU - COORDENADOR");
@@ -303,6 +310,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
 
         SidePane.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, -1, 50));
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/carlogo2branco.png"))); // NOI18N
+        SidePane.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 210, 50));
 
         ContentPane.setBackground(new java.awt.Color(250, 251, 251));
         ContentPane.setLayout(new javax.swing.BoxLayout(ContentPane, javax.swing.BoxLayout.LINE_AXIS));

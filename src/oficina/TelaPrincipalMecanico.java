@@ -7,6 +7,8 @@ package oficina;
 
 import MenuContents.*;
 import java.awt.Color;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -19,8 +21,18 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
     /**
      * Creates new form telaPerfilMecanico
      */
+    
+    public void ajustar_logo(){
+        ImageIcon icon = new ImageIcon("C:\\Users\\Denilson\\Documents\\NetBeansProjects\\Oficina\\src\\oficina\\imagens\\carLogo2branco.png");
+        Image img = icon.getImage();
+        Image foto = img.getScaledInstance(jLabel21.getWidth(), jLabel21.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon foto_ajustada = new ImageIcon(foto);
+        jLabel21.setIcon(foto_ajustada);
+    }
+    
     public TelaPrincipalMecanico() {
         initComponents();
+        ajustar_logo();
         
         new SwitchMenu(ContentPane, new Manutencao_M());
     }

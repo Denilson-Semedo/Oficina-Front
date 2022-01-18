@@ -10,6 +10,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,8 +21,19 @@ public class Tarefas_M extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
+    
+    public void preencherTabela(){
+        String colunas[] = {"Estado", "Nome", "Carro"};
+        String[][] dados =  {
+            {"","",""},
+        };
+        DefaultTableModel model = new DefaultTableModel (dados,colunas);
+        jTable3.setModel(model);
+    }
+    
     public Tarefas_M() {
         initComponents();
+        preencherTabela();
     }
 
     /**
@@ -51,7 +63,7 @@ public class Tarefas_M extends javax.swing.JPanel {
         jTable3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"", null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null}
@@ -60,9 +72,16 @@ public class Tarefas_M extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3"
             }
         ) {
+            Class[] types = new Class [] {
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class
+            };
             boolean[] canEdit = new boolean [] {
                 false, false, false
             };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
