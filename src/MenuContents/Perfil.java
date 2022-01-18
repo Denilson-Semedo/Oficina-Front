@@ -7,6 +7,7 @@ package MenuContents;
 
 import java.awt.Image;
 import java.io.File;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
@@ -362,10 +363,11 @@ public class Perfil extends javax.swing.JPanel {
         chooser.showOpenDialog(null);
         File f = chooser.getSelectedFile();
         String filename = f.getAbsolutePath();
-        Image getAbsolutePath = null;
         ImageIcon icon = new ImageIcon(filename);
-        Image image = icon.getImage().getScaledInstance(66,66, Image.SCALE_AREA_AVERAGING);
-        jPanel_Foto.setIcon(icon);
+        Image img = icon.getImage();
+        Image foto  = img.getScaledInstance(jPanel_Foto.getWidth(),jPanel_Foto.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon image = new ImageIcon(foto);
+        jPanel_Foto.setIcon(image);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed

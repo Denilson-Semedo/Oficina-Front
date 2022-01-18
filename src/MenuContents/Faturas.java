@@ -10,6 +10,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,8 +21,31 @@ public class Faturas extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
+    
+    public void preencherTabela(){
+        String colunas[] = {"Mês da faturação", "Total faturado"};
+        String dados[][] = {
+            {"Janeiro","200000"},
+            {"Fevereiro","200000"},
+            {"Março","200000"},
+            {"Abril","200000"},
+            {"Maio","200000"},
+            {"Junho","200000"},
+            {"Julho","200000"},
+            {"Agosto","200000"},
+            {"Setembro","200000"},
+            {"Outubro","200000"},
+            {"Novembro","200000"},
+            {"Dezembro","200000"}
+        };
+        
+        DefaultTableModel model = new DefaultTableModel (dados,colunas);
+        jTable3.setModel(model);
+    }
+    
     public Faturas() {
         initComponents();
+        preencherTabela();
     }
 
     /**
@@ -53,15 +77,24 @@ public class Faturas extends javax.swing.JPanel {
         jTable3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"", null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {"", null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3"
+                "Title 1", "Title 2"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable3.setEnabled(false);
         jScrollPane3.setViewportView(jTable3);
 
         jLabel1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N

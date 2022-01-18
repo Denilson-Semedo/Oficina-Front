@@ -59,7 +59,15 @@ public class Tarefas_M extends javax.swing.JPanel {
             new String [] {
                 "Title 1", "Title 2", "Title 3"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(jTable3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
