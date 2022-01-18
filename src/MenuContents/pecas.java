@@ -10,6 +10,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,8 +21,19 @@ public class pecas extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
+    public void preencherTabela(){
+        String colunas[] = {"Nome da peça", "Quantidade", "Coordenador"};
+        Object dados[][] = {
+            {"Roda","20","Denilson Tavares"}
+        };
+        
+        DefaultTableModel model = new DefaultTableModel (dados,colunas);
+        jTable3.setModel(model);
+    }
+    
     public pecas() {
         initComponents();
+        preencherTabela();
     }
 
     /**
