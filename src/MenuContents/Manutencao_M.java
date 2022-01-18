@@ -10,6 +10,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,8 +21,21 @@ public class Manutencao_M extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
+    
+    public void preencherTabela(){
+        String colunas[] = {"Estado", "Serviço", "Carro", "Data entrada","Data saída"};
+        Object dados[][] = {
+            {"Concluido","Trocar Pneu","ST-00-CV","25-12-2021","25-12-2021"}
+        };
+        
+        DefaultTableModel model = new DefaultTableModel (dados,colunas);
+        jTable3.setModel(model);
+    }
+    
+    
     public Manutencao_M() {
         initComponents();
+        preencherTabela();
     }
 
     /**
@@ -51,12 +65,13 @@ public class Manutencao_M extends javax.swing.JPanel {
         jLabel12.setText("Manutenção");
 
         jComboBox2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Em manutenção", "Concluido" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Concluido", "Em andamento" }));
         jComboBox2.setBorder(null);
 
         jLabel14.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel14.setText("Estado");
 
+        jTable3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

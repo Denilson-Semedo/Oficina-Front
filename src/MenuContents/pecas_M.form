@@ -51,9 +51,9 @@
               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="452" max="32767" attributes="0"/>
+              <EmptySpace pref="442" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

@@ -24,16 +24,20 @@ public class Tarefas_M extends javax.swing.JPanel {
     
     public void preencherTabela(){
         String colunas[] = {"Estado", "Nome", "Carro"};
-        String[][] dados =  {
-            {"","",""},
+        
+        Object[][] dados = {
+            {new Boolean(true),"Teste1","Teste2"},
         };
+        
         DefaultTableModel model = new DefaultTableModel (dados,colunas);
+        
         jTable3.setModel(model);
     }
     
     public Tarefas_M() {
         initComponents();
         preencherTabela();
+        jTable3.setEnabled(false);
     }
 
     /**
@@ -69,7 +73,7 @@ public class Tarefas_M extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3"
+                "Estado", "Nome", "Carro"
             }
         ) {
             Class[] types = new Class [] {

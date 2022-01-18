@@ -10,6 +10,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,8 +21,20 @@ public class pecas_M extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
+    
+    public void preencherTabela(){
+        String colunas[] = {"Nome da peça", "Quantidade", "Coordenador"};
+        Object dados[][] = {
+            {"Roda","20","Denilson Tavares"}
+        };
+        
+        DefaultTableModel model = new DefaultTableModel (dados,colunas);
+        jTable3.setModel(model);
+    }
+    
     public pecas_M() {
         initComponents();
+        preencherTabela();
     }
 
     /**
@@ -83,9 +96,9 @@ public class pecas_M extends javax.swing.JPanel {
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(452, Short.MAX_VALUE))
+                .addContainerGap(442, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

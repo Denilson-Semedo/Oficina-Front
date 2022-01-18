@@ -24,7 +24,7 @@ public class Faturas extends javax.swing.JPanel {
     
     public void preencherTabela(){
         String colunas[] = {"Mês da faturação", "Total faturado"};
-        String dados[][] = {
+        Object dados[][] = {
             {"Janeiro","200000"},
             {"Fevereiro","200000"},
             {"Março","200000"},
@@ -46,6 +46,7 @@ public class Faturas extends javax.swing.JPanel {
     public Faturas() {
         initComponents();
         preencherTabela();
+        jTable3.setEnabled(false);
     }
 
     /**

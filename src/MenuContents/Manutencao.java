@@ -10,6 +10,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,8 +21,21 @@ public class Manutencao extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
+    
+    public void preencherTabela(){
+        String colunas[] = {"Estado", "Serviço", "Carro", "Data entrada","Data saída"};
+        Object dados[][] = {
+            {"Concluido","Trocar Pneu","ST-00-CV","25-12-2021","25-12-2021"}
+        };
+        
+        DefaultTableModel model = new DefaultTableModel (dados,colunas);
+        jTable1.setModel(model);
+        jTable2.setModel(model);
+    }
+    
     public Manutencao() {
         initComponents();
+        preencherTabela();
     }
 
     /**
@@ -42,10 +56,10 @@ public class Manutencao extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
         jButton3 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jSpinner1 = new javax.swing.JSpinner();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
 
@@ -62,7 +76,7 @@ public class Manutencao extends javax.swing.JPanel {
         jLabel14.setText("Estado");
 
         jComboBox2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Em manutenção", "Concluido" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Concluido", "Em manutenção" }));
         jComboBox2.setBorder(null);
 
         jButton2.setBackground(new java.awt.Color(8, 32, 50));
@@ -101,7 +115,7 @@ public class Manutencao extends javax.swing.JPanel {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1008, Short.MAX_VALUE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14)
@@ -131,15 +145,6 @@ public class Manutencao extends javax.swing.JPanel {
 
         jLabel15.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel15.setText("Data");
-
-        jComboBox3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendente", "Em manutenção" }));
-        jComboBox3.setBorder(null);
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
-            }
-        });
 
         jButton3.setBackground(new java.awt.Color(8, 32, 50));
         jButton3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
@@ -171,17 +176,20 @@ public class Manutencao extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(jTable2);
 
+        jSpinner1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), new java.util.Date(1641049140000L), new java.util.Date(1645196340000L), java.util.Calendar.WEEK_OF_MONTH));
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1008, Short.MAX_VALUE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel15)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, 0))
@@ -195,7 +203,7 @@ public class Manutencao extends javax.swing.JPanel {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel15)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -264,16 +272,11 @@ public class Manutencao extends javax.swing.JPanel {
         new PopUp_Saida().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -282,6 +285,7 @@ public class Manutencao extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
