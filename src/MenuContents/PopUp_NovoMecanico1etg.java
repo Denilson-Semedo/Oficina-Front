@@ -34,11 +34,11 @@ public class PopUp_NovoMecanico1etg extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel16 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        jSpinner2 = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -46,9 +46,6 @@ public class PopUp_NovoMecanico1etg extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel16.setText("Data Ínicio");
-
-        jTextField1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jTextField1.setText("dd/mm/aaaa");
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
         jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
@@ -69,11 +66,12 @@ public class PopUp_NovoMecanico1etg extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel17.setText("Data Fim");
 
-        jTextField2.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jTextField2.setText("dd/mm/aaaa");
-
         jLabel23.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel23.setText("2 de 3");
+
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel());
+
+        jSpinner2.setModel(new javax.swing.SpinnerDateModel());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,26 +87,26 @@ public class PopUp_NovoMecanico1etg extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel16)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17))))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jSpinner2, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jSpinner1)))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -126,6 +124,7 @@ public class PopUp_NovoMecanico1etg extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        new PopUp_NovoMecanico2().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -424,7 +423,7 @@ public class PopUp_NovoMecanico1etg extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
     // End of variables declaration//GEN-END:variables
 }

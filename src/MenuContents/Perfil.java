@@ -92,7 +92,7 @@ public class Perfil extends javax.swing.JPanel {
         jLabel15.setText("Nome");
 
         jLabel17.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jLabel17.setText("Telefone");
+        jLabel17.setText("Telemóvel");
 
         jTextField3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextField3.setText("+2389863786");

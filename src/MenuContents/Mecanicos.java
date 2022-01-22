@@ -52,13 +52,13 @@ public class Mecanicos extends javax.swing.JPanel {
         jTable3.setFont(new java.awt.Font("Quicksand Medium", 0, 12)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"", null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {"", null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7", "Title 8", "Title 9", "Title 10", "Title 11", "Title 12", "Title 13"
+                "Nome", "Sobrenome", "Email", "Telemóvel", "Morada", "Salário", "INPS", "NIF", "Data inicio", "Data fim", "Estado"
             }
         ));
         jScrollPane3.setViewportView(jTable3);
