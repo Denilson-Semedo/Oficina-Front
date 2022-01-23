@@ -10,6 +10,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,6 +21,28 @@ public class Mecanicos extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
+    
+    /*public boolean preencherTabela() {
+
+        boolean msg = false;
+
+        listaMecanicos = Mecanicos_request.getMecanicos();
+
+        if (!listaMecanicos.isEmpty()) {
+            DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+            model.getDataVector().removeAllElements();
+            listaMecanicos.forEach((valor) -> {
+
+                //model.addRow(new Object[]{valor.getNome(), valor.getQuantidade(), valor.getCoordenador().getNome()});
+
+            });
+            msg = true;
+        } else {
+            msg = false;
+        }
+        return msg;
+    }*/
+    
     public Mecanicos() {
         initComponents();
     }

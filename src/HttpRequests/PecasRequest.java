@@ -17,6 +17,25 @@ import models.Constant;
 import models.Pecas;
 
 public class PecasRequest {
+    
+    public void setPecas(Pecas peca) throws IOException, InterruptedException{
+        String msg = null;
+        Gson gson = new Gson();
+        String requestBody = gson.toJson(peca);
+        String uri = Constant.domain.DOMAIN + "/api/pecas/registar_pecas";
+        
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody))
+                .uri(URI.create(uri))
+                .header("Accept", "application/json")
+                .header("Content-Type", "application/json")
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println("chegou em atualiazr efetivo " + response.body());
+    }
 
     public List<Pecas> getPecas(String biCoordenador) {
 

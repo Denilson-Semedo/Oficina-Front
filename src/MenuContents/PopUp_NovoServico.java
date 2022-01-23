@@ -5,23 +5,41 @@
  */
 package MenuContents;
 
+import HttpRequests.ServicosRequest;
 import oficina.*;
 import java.awt.Image;
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import models.Servico;
 
 /**
  *
  * @author Denilson
  */
 public class PopUp_NovoServico extends javax.swing.JFrame {
-
     /**
      * Creates new form TelaManutencao2NovaEntrada
      */
     public PopUp_NovoServico() {
         initComponents();
+    }
+    
+    private void addServico() throws IOException{
+        Servico servico = new Servico();
+        ServicosRequest servico_request = new ServicosRequest();
+        
+        servico.setId_servico(23);
+        servico.setNome(jTextField1.getText());
+        
+        try {
+            servico_request.setServicos(servico);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(PopUp_NovoServico.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -100,7 +118,12 @@ public class PopUp_NovoServico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            addServico();
+        } catch (IOException ex) {
+            Logger.getLogger(PopUp_NovoServico.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

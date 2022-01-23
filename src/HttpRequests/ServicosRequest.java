@@ -15,8 +15,30 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import models.Constant;
 import models.Servico;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpResponse.BodyHandlers;
 
 public class ServicosRequest {
+    
+    public void setServicos(Servico servico) throws IOException, InterruptedException{
+        String msg = null;
+        Gson gson = new Gson();
+        String requestBody = gson.toJson(servico);
+        String uri = Constant.domain.DOMAIN + "/api/servico/registar_servico";
+        
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody))
+                .uri(URI.create(uri))
+                .header("Accept", "application/json")
+                .header("Content-Type", "application/json")
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println("chegou em atualiazr efetivo " + response.body());
+        
+    }
 
     public List<Servico> getServicos() {
 

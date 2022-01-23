@@ -17,6 +17,10 @@ public class Pecas {
         this.coordenador = coordenador;
     }
 
+    public Pecas() {
+        
+    }
+
     public int getId_pecas() {
         return id_pecas;
     }

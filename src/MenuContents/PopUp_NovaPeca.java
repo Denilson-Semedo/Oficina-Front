@@ -5,23 +5,53 @@
  */
 package MenuContents;
 
+import HttpRequests.CoordenadorRequest;
+import HttpRequests.PecasRequest;
+import HttpRequests.ServicosRequest;
 import oficina.*;
 import java.awt.Image;
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import models.Coordenador;
+import models.Pecas;
 
 /**
  *
  * @author Denilson
  */
 public class PopUp_NovaPeca extends javax.swing.JFrame {
-
     /**
      * Creates new form TelaManutencao2NovaEntrada
      */
     public PopUp_NovaPeca() {
         initComponents();
+    }
+    
+    private void addPecas(){
+        Pecas peca = new Pecas();
+        Coordenador coordenador = new Coordenador();
+        PecasRequest pecas_request = new PecasRequest();
+        CoordenadorRequest coordenador_request = new CoordenadorRequest();
+        
+        peca.setId_pecas(11);
+        peca.setNome(jTextField1.getText());
+        peca.setQuantidade(jSpinner1.getWidth());
+        
+        coordenador = coordenador_request.getInfoCoordenadorRequest("Joananita6574");
+        peca.setCoordenador(coordenador);
+        
+        try {
+            pecas_request.setPecas(peca);
+        } catch (IOException ex) {
+            Logger.getLogger(PopUp_NovaPeca.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(PopUp_NovaPeca.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     /**
@@ -116,6 +146,7 @@ public class PopUp_NovaPeca extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        addPecas();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

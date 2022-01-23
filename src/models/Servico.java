@@ -11,6 +11,10 @@ public class Servico {
         this.nome = nome;
     }
 
+    public Servico() {
+        
+    }
+
     public int getId_servico() {
         return id_servico;
     }

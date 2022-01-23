@@ -9,6 +9,10 @@ public class Coordenador extends Utilizador {
         this.morada = morada;
     }
 
+    public Coordenador() {
+        
+    }
+
     public String getMorada() {
         return morada;
     }
