@@ -282,7 +282,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cube.png"))); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/file-text-outline.png"))); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
