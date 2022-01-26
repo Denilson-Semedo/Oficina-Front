@@ -113,7 +113,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, 50));
+        SidePane.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, 50));
 
         jPanel3.setBackground(new java.awt.Color(8, 32, 50));
         jPanel3.setPreferredSize(new java.awt.Dimension(250, 47));
@@ -150,7 +150,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, 50));
+        SidePane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, 50));
 
         jPanel4.setBackground(new java.awt.Color(0, 74, 96));
         jPanel4.setPreferredSize(new java.awt.Dimension(250, 47));
@@ -187,7 +187,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, -1, 50));
+        SidePane.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, 50));
 
         jPanel5.setBackground(new java.awt.Color(8, 32, 50));
         jPanel5.setPreferredSize(new java.awt.Dimension(250, 47));
@@ -224,16 +224,16 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, -1, 50));
+        SidePane.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, 50));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/carlogo2branco.png"))); // NOI18N
-        SidePane.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 210, 50));
+        SidePane.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 210, 50));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(156, 156, 156));
         jLabel11.setText("MENU - MECÂNICO");
-        SidePane.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        SidePane.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         ContentPane.setBackground(new java.awt.Color(250, 251, 251));
         ContentPane.setLayout(new javax.swing.BoxLayout(ContentPane, javax.swing.BoxLayout.LINE_AXIS));

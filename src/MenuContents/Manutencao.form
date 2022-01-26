@@ -76,8 +76,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="ENTRADAS">
-                <Property name="tabTitle" type="java.lang.String" value="ENTRADAS"/>
+              <JTabbedPaneConstraints tabName="ENTRADAS DE VE&#xcd;CULOS">
+                <Property name="tabTitle" type="java.lang.String" value="ENTRADAS DE VE&#xcd;CULOS"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -203,8 +203,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="SA&#xcd;DAS">
-                <Property name="tabTitle" type="java.lang.String" value="SA&#xcd;DAS"/>
+              <JTabbedPaneConstraints tabName="SA&#xcd;DAS DE VE&#xcd;CULOS">
+                <Property name="tabTitle" type="java.lang.String" value="SA&#xcd;DAS DE VE&#xcd;CULOS"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>

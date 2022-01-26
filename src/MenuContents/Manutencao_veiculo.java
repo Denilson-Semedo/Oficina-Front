@@ -5,6 +5,7 @@
  */
 package MenuContents;
 
+import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
 import javax.swing.ImageIcon;
@@ -20,8 +21,10 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
+        
     public Manutencao_veiculo() {
         initComponents();
+        jTable1.getTableHeader().setFont(new Font("Quicksand Medium", 0, 15));
     }
 
     /**
@@ -38,14 +41,11 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
         jLabel14 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -69,11 +69,8 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
         jLabel31.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel31.setText("Coordenador");
 
-        jLabel32.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jLabel32.setText("icon");
-
         jLabel33.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jLabel33.setText("Isabelle Tostões");
+        jLabel33.setText("Luís Tavares");
 
         jLabel34.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel34.setText("Veículo");
@@ -87,26 +84,17 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
         jLabel36.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel36.setText("Denilson Tavares");
 
-        jLabel39.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jLabel39.setText("Cliente");
-
-        jLabel38.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jLabel38.setText("Denilson Tavares");
-
         jTable1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, "Lixar porta da frente do veículo", "Jardel Moreno"}
             },
             new String [] {
-                "Estado", "Tarefa", "Mecánico", "Eliminar", "Mais"
+                "Estado", "Tarefa", "Mecánico"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Boolean.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Boolean.class, java.lang.String.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -134,17 +122,12 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
                             .addComponent(jLabel14)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel31)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel33))
                             .addComponent(jLabel34)
                             .addComponent(jLabel35)
                             .addComponent(jLabel37)
                             .addComponent(jLabel36)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel38))
-                        .addContainerGap(74, Short.MAX_VALUE))
+                            .addComponent(jLabel33))
+                        .addContainerGap(77, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jSeparator1)
@@ -173,9 +156,7 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel31)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel33))
+                        .addComponent(jLabel33)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel34)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -183,11 +164,7 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel37)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel36)
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel39)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel38))
+                        .addComponent(jLabel36))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(419, Short.MAX_VALUE))
         );
@@ -200,14 +177,11 @@ public class Manutencao_veiculo extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;

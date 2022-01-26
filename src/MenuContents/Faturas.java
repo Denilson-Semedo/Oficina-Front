@@ -5,11 +5,14 @@
  */
 package MenuContents;
 
+import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -21,32 +24,39 @@ public class Faturas extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
-    
-    public void preencherTabela(){
+    public void preencherTabela() {
         String colunas[] = {"Mês da faturação", "Total faturado"};
         Object dados[][] = {
-            {"Janeiro","200000"},
-            {"Fevereiro","200000"},
-            {"Março","200000"},
-            {"Abril","200000"},
-            {"Maio","200000"},
-            {"Junho","200000"},
-            {"Julho","200000"},
-            {"Agosto","200000"},
-            {"Setembro","200000"},
-            {"Outubro","200000"},
-            {"Novembro","200000"},
-            {"Dezembro","200000"}
+            {"Janeiro", "200000"},
+            {"Fevereiro", "200000"},
+            {"Março", "200000"},
+            {"Abril", "200000"},
+            {"Maio", "200000"},
+            {"Junho", "200000"},
+            {"Julho", "200000"},
+            {"Agosto", "200000"},
+            {"Setembro", "200000"},
+            {"Outubro", "200000"},
+            {"Novembro", "200000"},
+            {"Dezembro", "200000"}
         };
-        
-        DefaultTableModel model = new DefaultTableModel (dados,colunas);
+
+        DefaultTableModel model = new DefaultTableModel(dados, colunas);
         jTable3.setModel(model);
     }
-    
+
     public Faturas() {
         initComponents();
+        jTable3.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            public void valueChanged(ListSelectionEvent event) {
+                // do some actions here, for example
+                // print first column value from selected row
+                System.out.println(jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString());
+            }
+        });
+        jTable3.getTableHeader().setFont(new Font("Quicksand Medium", 0, 15));
+        //jTable3.setEnabled(false);
         preencherTabela();
-        jTable3.setEnabled(false);
     }
 
     /**
@@ -95,7 +105,6 @@ public class Faturas extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jTable3.setEnabled(false);
         jScrollPane3.setViewportView(jTable3);
 
         jLabel1.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N

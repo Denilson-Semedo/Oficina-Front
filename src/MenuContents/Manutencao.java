@@ -5,11 +5,16 @@
  */
 package MenuContents;
 
+import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
+import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JSpinner;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -33,8 +38,33 @@ public class Manutencao extends javax.swing.JPanel {
         jTable2.setModel(model);
     }
     
+    public void data() {
+        Date today = new Date();
+        JSpinner.DateEditor editor1 = new JSpinner.DateEditor(jSpinner1, "dd/MM/yy");
+        jSpinner1.setEditor(editor1);
+    }
+    
     public Manutencao() {
         initComponents();
+        data();
+        jTable1.getTableHeader().setFont(new Font("Quicksand Medium", 0, 15));
+        jTable1.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            public void valueChanged(ListSelectionEvent event) {
+                // do some actions here, for example
+                // print first column value from selected row
+                //System.out.println(jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString());
+                new Manutencao_veiculo().setVisible(true);
+                //new SwitchMenu(Manutencao(), new Manutencao_veiculo());
+            }
+        });
+        /*jTable2.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            public void valueChanged(ListSelectionEvent event) {
+                // do some actions here, for example
+                // print first column value from selected row
+                //System.out.println(jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString());
+                new Manutencao_veiculo().setVisible(true);
+            }
+        });*/
         preencherTabela();
     }
 
@@ -139,7 +169,7 @@ public class Manutencao extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("ENTRADAS", jPanel6);
+        jTabbedPane1.addTab("ENTRADAS DE VEÍCULOS", jPanel6);
 
         jPanel7.setBackground(new java.awt.Color(250, 251, 251));
 
@@ -209,7 +239,7 @@ public class Manutencao extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("SAÍDAS", jPanel7);
+        jTabbedPane1.addTab("SAÍDAS DE VEÍCULOS", jPanel7);
 
         jSeparator1.setForeground(new java.awt.Color(196, 196, 196));
 
@@ -251,7 +281,6 @@ public class Manutencao extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         new PopUp_NovaEntrada().setVisible(true);
-        //new PopUp_NovaEntrada().setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked

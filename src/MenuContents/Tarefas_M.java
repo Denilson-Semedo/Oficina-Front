@@ -5,11 +5,14 @@
  */
 package MenuContents;
 
+import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -23,10 +26,10 @@ public class Tarefas_M extends javax.swing.JPanel {
      */
     
     public void preencherTabela(){
-        String colunas[] = {"Estado", "Nome", "Carro"};
+        String colunas[] = {"Estado", "Nome","Serviço", "Carro"};
         
         Object[][] dados = {
-            {new Boolean(true),"Teste1","Teste2"},
+            {"Concluido","Trocar Roda","Trocar Roda","ST-00-RT"},
         };
         
         DefaultTableModel model = new DefaultTableModel (dados,colunas);
@@ -36,8 +39,16 @@ public class Tarefas_M extends javax.swing.JPanel {
     
     public Tarefas_M() {
         initComponents();
+        jTable3.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            public void valueChanged(ListSelectionEvent event) {
+                // do some actions here, for example
+                // print first column value from selected row
+                //System.out.println(jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString());
+                new Tarefa_Desc().setVisible(true);
+            }
+        });
         preencherTabela();
-        jTable3.setEnabled(false);
+        jTable3.getTableHeader().setFont(new Font("Quicksand Medium", 0, 15));
     }
 
     /**

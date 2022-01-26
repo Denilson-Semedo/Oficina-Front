@@ -5,6 +5,7 @@
  */
 package MenuContents;
 
+import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
 import javax.swing.ImageIcon;
@@ -35,6 +36,7 @@ public class Manutencao_M extends javax.swing.JPanel {
     
     public Manutencao_M() {
         initComponents();
+        jTable3.getTableHeader().setFont(new Font("Quicksand Medium", 0, 15));
         preencherTabela();
     }
 

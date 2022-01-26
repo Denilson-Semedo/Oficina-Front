@@ -90,7 +90,7 @@ public class PopUp_NovoMecanico extends javax.swing.JFrame {
         jTextField4.setText("jTextField1");
 
         jLabel19.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jLabel19.setText("Telefone");
+        jLabel19.setText("Telemóvel");
 
         jTextField6.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTextField6.setText("jTextField1");

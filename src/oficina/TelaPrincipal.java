@@ -70,6 +70,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         ContentPane = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -119,7 +122,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 250, 50));
+        SidePane.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 50));
 
         jPanel2.setBackground(new java.awt.Color(8, 32, 50));
         jPanel2.setPreferredSize(new java.awt.Dimension(250, 47));
@@ -156,7 +159,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, -1, 50));
+        SidePane.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, 50));
 
         jPanel3.setBackground(new java.awt.Color(8, 32, 50));
         jPanel3.setPreferredSize(new java.awt.Dimension(250, 47));
@@ -193,7 +196,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, -1, 50));
+        SidePane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, 50));
 
         jPanel4.setBackground(new java.awt.Color(0, 74, 96));
         jPanel4.setPreferredSize(new java.awt.Dimension(250, 47));
@@ -230,7 +233,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, -1, 50));
+        SidePane.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, 50));
 
         jPanel5.setBackground(new java.awt.Color(8, 32, 50));
         jPanel5.setPreferredSize(new java.awt.Dimension(250, 47));
@@ -267,12 +270,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, -1, 50));
+        SidePane.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, -1, 50));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(156, 156, 156));
         jLabel11.setText("MENU - COORDENADOR");
-        SidePane.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        SidePane.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(8, 32, 50));
         jPanel6.setPreferredSize(new java.awt.Dimension(250, 47));
@@ -309,11 +312,48 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, -1, 50));
+        SidePane.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, -1, 50));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/carlogo2branco.png"))); // NOI18N
-        SidePane.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 210, 50));
+        SidePane.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 210, 50));
+
+        jPanel7.setBackground(new java.awt.Color(8, 32, 50));
+        jPanel7.setPreferredSize(new java.awt.Dimension(250, 47));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clock-outline.png"))); // NOI18N
+
+        jLabel15.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Marcações");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel15)
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addContainerGap())
+        );
+
+        SidePane.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, 50));
 
         ContentPane.setBackground(new java.awt.Color(250, 251, 251));
         ContentPane.setLayout(new javax.swing.BoxLayout(ContentPane, javax.swing.BoxLayout.LINE_AXIS));
@@ -356,6 +396,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel3);
         resetColor(jPanel5);
         resetColor(jPanel6);
+        resetColor(jPanel7);
         new SwitchMenu(ContentPane, new Manutencao());
     }//GEN-LAST:event_jPanel4MouseClicked
 
@@ -367,6 +408,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel4);
         resetColor(jPanel5);
         resetColor(jPanel6);
+        resetColor(jPanel7);
         new SwitchMenu(ContentPane, new Mecanicos());
     }//GEN-LAST:event_jPanel1MouseClicked
 
@@ -378,6 +420,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel4);
         resetColor(jPanel5);
         resetColor(jPanel6);
+        resetColor(jPanel7);
         new SwitchMenu(ContentPane, new servicos());
     }//GEN-LAST:event_jPanel2MouseClicked
 
@@ -389,6 +432,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel4);
         resetColor(jPanel5);
         resetColor(jPanel6);
+        resetColor(jPanel7);
         new SwitchMenu(ContentPane, new Perfil());
     }//GEN-LAST:event_jPanel3MouseClicked
 
@@ -400,6 +444,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel3);
         resetColor(jPanel4);
         resetColor(jPanel6);
+        resetColor(jPanel7);
         new SwitchMenu(ContentPane, new pecas());
     }//GEN-LAST:event_jPanel5MouseClicked
 
@@ -412,8 +457,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel3);
         resetColor(jPanel4);
         resetColor(jPanel5);
+        resetColor(jPanel7);
         new SwitchMenu(ContentPane, new Faturas());
     }//GEN-LAST:event_jPanel6MouseClicked
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        // TODO add your handling code here:
+        setColor(jPanel7);
+        resetColor(jPanel1);
+        resetColor(jPanel2);
+        resetColor(jPanel3);
+        resetColor(jPanel4);
+        resetColor(jPanel5);
+        resetColor(jPanel6);
+        new SwitchMenu(ContentPane, new Marcacao());
+    }//GEN-LAST:event_jPanel7MouseClicked
 
     public void setColor (JPanel panel){
         panel.setBackground(new Color(0,74,96));
@@ -482,6 +540,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
@@ -497,5 +557,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     // End of variables declaration//GEN-END:variables
 }
