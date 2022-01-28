@@ -6,6 +6,7 @@
 package MenuContents;
 
 import HttpRequests.PecasRequest;
+import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import models.Pecas;
 
@@ -62,6 +64,7 @@ public class pecas extends javax.swing.JPanel {
     
     public pecas() {
         initComponents();
+        jTable3.getTableHeader().setFont(new Font("Quicksand Medium", 0, 15));
         preencherTabela("1111");
     }
 
@@ -94,10 +97,7 @@ public class pecas extends javax.swing.JPanel {
         jTable3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"", null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Nome Peça", "Quantidade", "Coordenador"
