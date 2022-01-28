@@ -8,8 +8,13 @@ package MenuContents;
 import oficina.*;
 import java.awt.Image;
 import java.io.File;
+import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import HttpRequests.CoordenadorRequest;
+import models.Coordenador;
+import models.Manutencao;
+import models.Saida;
 
 /**
  *
@@ -22,6 +27,23 @@ public class PopUp_Saida extends javax.swing.JFrame {
      */
     public PopUp_Saida() {
         initComponents();
+    }
+    
+    public void novaSaida(){
+        Saida saida = new Saida();
+        Manutencao manutencao = new Manutencao();
+        Coordenador coordenador = new Coordenador();
+        CoordenadorRequest coordenador_request = new CoordenadorRequest();
+        coordenador = coordenador_request.getInfoCoordenadorRequest("Joananita6574");
+        Date data = new Date();
+  
+        
+        saida.setEstado_do_carro(jTextArea3.getText());
+        saida.setLevantamento_carro(jTextField3.getText());
+        saida.setCoordenador(coordenador);
+        //saida.setData_saida(data);
+        //saida.setHora_saida(hora_saida);
+        //saida.setMatricula_carro(matricula_carro);
     }
 
     /**
@@ -165,6 +187,7 @@ public class PopUp_Saida extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        novaSaida();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked

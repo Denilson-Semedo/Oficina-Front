@@ -46,7 +46,7 @@ public class Mecanicos extends javax.swing.JPanel {
         return msg;
     }*/
     
-    public void preencherTabela(){
+    /*public void preencherTabela(){
         String colunas[] = {"Nome","Morada","Salário","INPS","NIF","Data início","Data Fim","Estado"};
         Object dados[][] = {
             {"Jardel Moreno","Ponta d'agua","15000","875644","8976543","-","-","efetivo"}
@@ -54,6 +54,10 @@ public class Mecanicos extends javax.swing.JPanel {
         
         DefaultTableModel model = new DefaultTableModel (dados,colunas);
         jTable3.setModel(model);
+    }*/
+    
+    public void preencherTabela(){
+        
     }
     
     public Mecanicos() {

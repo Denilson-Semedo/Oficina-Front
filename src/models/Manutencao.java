@@ -28,6 +28,10 @@ public class Manutencao {
         this.fatura = fatura;
     }
 
+    public Manutencao() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getId_manutencao() {
         return id_manutencao;
     }

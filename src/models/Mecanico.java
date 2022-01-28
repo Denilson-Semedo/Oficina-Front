@@ -15,6 +15,10 @@ public class Mecanico extends Utilizador{
         this.oficina = oficina;
     }
 
+    public Mecanico() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getMorada() {
         return morada;
     }

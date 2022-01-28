@@ -20,11 +20,29 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 public class MarcacaoRequest {
     
+    public void setMarcacao(Marcacao marcacao) throws IOException, InterruptedException{
+        String msg = null;
+        Gson gson = new Gson();
+        String requestBody = gson.toJson(marcacao);
+        String uri = Constant.domain.DOMAIN + "/api/servico/registar_servico";
+        
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody))
+                .uri(URI.create(uri))
+                .header("Accept", "application/json")
+                .header("Content-Type", "application/json")
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        
+    }
+
     public List<Marcacao> getMarcacao() {
 
         String msg = null;
         List<Marcacao> marcacao = new ArrayList<>();
-        String uri = Constant.domain.DOMAIN + "/api/servico/listar_servicos";
+        String uri = Constant.domain.DOMAIN + "/api/marcacao/lista_marcacao";
 
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
@@ -38,9 +56,9 @@ public class MarcacaoRequest {
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
             msg = response.body();
         } catch (IOException ex) {
-            Logger.getLogger(Perfil.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(Perfil.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InterruptedException ex) {
-            Logger.getLogger(Perfil.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(Perfil.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         if (msg != null) {

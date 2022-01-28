@@ -5,11 +5,16 @@
  */
 package MenuContents;
 
+import HttpRequests.CoordenadorRequest;
 import oficina.*;
 import java.awt.Image;
 import java.io.File;
+import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import models.Coordenador;
+import models.Manutencao;
+import models.Entrada;
 
 /**
  *
@@ -22,6 +27,28 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
      */
     public PopUp_NovaEntrada() {
         initComponents();
+    }
+    
+    public void novaEntrada(){
+        Entrada entrada = new Entrada();
+        Manutencao manutencao = new Manutencao();
+        Coordenador coordenador = new Coordenador();
+        CoordenadorRequest coordenador_request = new CoordenadorRequest();
+        coordenador = coordenador_request.getInfoCoordenadorRequest("Joananita6574");
+        Date data = new Date();
+  
+        
+        entrada.setCoordenador(coordenador);
+        entrada.setData_entrada(data);
+        //entrada.setEntrada_carro(entrada_carro);
+        entrada.setEstado_do_carro(jTextArea1.getText());
+        entrada.setRiscos(jTextArea2.getText());
+        //entrada.setFt_frente(ft_frente);
+        //entrada.setFt_lateral(ft_lateral);
+        //entrada.setFt_tras(ft_tras);
+        //entrada.setHora_entrada(hora_entrada);
+        //entrada.setMatricula_carro(matricula_carro);
+        
     }
 
     /**
@@ -228,6 +255,7 @@ public class PopUp_NovaEntrada extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        novaEntrada();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed

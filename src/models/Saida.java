@@ -28,6 +28,10 @@ public class Saida {
         this.coordenador = coordenador;
     }
 
+    public Saida() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getId_saida() {
         return id_saida;
     }

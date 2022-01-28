@@ -41,6 +41,10 @@ public class Entrada {
         this.coordenador = coordenador;
     }
 
+    public Entrada() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getId_entrada() {
         return id_entrada;
     }

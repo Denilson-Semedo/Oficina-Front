@@ -13,6 +13,29 @@ import models.Constant;
 import models.Efetivo;
 
 public class EfetivoRequest {
+    
+    public void setEfetivo(Efetivo efetivo){
+        String msg = null;
+        Gson gson = new Gson();
+        String requestBody = gson.toJson(efetivo);
+        String uri = Constant.domain.DOMAIN + "/api/efetivo/registar_efetivo";
+        
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody))
+                .uri(URI.create(uri))
+                .header("Accept", "application/json")
+                .header("Content-Type", "application/json")
+                .build();
+
+        try {
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        } catch (IOException ex) {
+            Logger.getLogger(EfetivoRequest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(EfetivoRequest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     public Efetivo getInfoEfetivo(String username) {
 

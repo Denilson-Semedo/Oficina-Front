@@ -34,7 +34,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         initComponents();
         ajustar_logo();
         
-        new SwitchMenu(ContentPane, new Manutencao_M());
+        new SwitchMenu(ContentPane, new Tarefas_M());
     }
 
     //TelaManutencao2NovaEntrada telaManutencao2NovaEntrada = new TelaManutencao2NovaEntrada();
@@ -57,9 +57,6 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -78,7 +75,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         SidePane.setPreferredSize(new java.awt.Dimension(250, 441));
         SidePane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(8, 32, 50));
+        jPanel2.setBackground(new java.awt.Color(0, 74, 96));
         jPanel2.setPreferredSize(new java.awt.Dimension(250, 47));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -152,43 +149,6 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
 
         SidePane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, 50));
 
-        jPanel4.setBackground(new java.awt.Color(0, 74, 96));
-        jPanel4.setPreferredSize(new java.awt.Dimension(250, 47));
-        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel4MouseClicked(evt);
-            }
-        });
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Car.png"))); // NOI18N
-
-        jLabel8.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Manutenção");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel8)
-                .addContainerGap(87, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addContainerGap())
-        );
-
-        SidePane.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, 50));
-
         jPanel5.setBackground(new java.awt.Color(8, 32, 50));
         jPanel5.setPreferredSize(new java.awt.Dimension(250, 47));
         jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -224,7 +184,7 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        SidePane.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, 50));
+        SidePane.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, 50));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oficina/imagens/carlogo2branco.png"))); // NOI18N
@@ -268,22 +228,11 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
-        // TODO add your handling code here:
-        setColor(jPanel4);
-        //resetColor(jPanel1);
-        resetColor(jPanel2);
-        resetColor(jPanel3);
-        resetColor(jPanel5);
-        new SwitchMenu(ContentPane, new Manutencao_M());
-    }//GEN-LAST:event_jPanel4MouseClicked
-
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
         // TODO add your handling code here:
         setColor(jPanel2);
         //resetColor(jPanel1);
         resetColor(jPanel3);
-        resetColor(jPanel4);
         resetColor(jPanel5);
         new SwitchMenu(ContentPane, new Tarefas_M());
     }//GEN-LAST:event_jPanel2MouseClicked
@@ -293,7 +242,6 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         setColor(jPanel3);
         //resetColor(jPanel1);
         resetColor(jPanel2);
-        resetColor(jPanel4);
         resetColor(jPanel5);
         new SwitchMenu(ContentPane, new Perfil());
     }//GEN-LAST:event_jPanel3MouseClicked
@@ -304,7 +252,6 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
         //resetColor(jPanel1);
         resetColor(jPanel2);
         resetColor(jPanel3);
-        resetColor(jPanel4);
         new SwitchMenu(ContentPane, new pecas_M());
     }//GEN-LAST:event_jPanel5MouseClicked
 
@@ -393,12 +340,9 @@ public class TelaPrincipalMecanico extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }

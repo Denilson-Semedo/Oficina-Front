@@ -14,6 +14,10 @@ public class Efetivo extends Mecanico {
         this.inps = inps;
         this.nif = nif;
     }
+
+    public Efetivo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public double getSalario() {
         return salario;

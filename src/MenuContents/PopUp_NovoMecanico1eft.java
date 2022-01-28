@@ -10,6 +10,7 @@ import java.awt.Image;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import models.Efetivo;
 
 /**
  *
@@ -20,8 +21,21 @@ public class PopUp_NovoMecanico1eft extends javax.swing.JFrame {
     /**
      * Creates new form TelaManutencao2NovaEntrada
      */
-    public PopUp_NovoMecanico1eft() {
+    
+    Efetivo dadosEfetivo = new Efetivo();
+    
+    public Efetivo novoEfetivo(){
+        
+        dadosEfetivo.setInps(jTextField2.getText());
+        dadosEfetivo.setNif(jTextField1.getText());
+        dadosEfetivo.setSalario(jSpinner1.getWidth());
+        
+        return dadosEfetivo;
+    }
+    
+    public PopUp_NovoMecanico1eft(Efetivo efetivo) {
         initComponents();
+        dadosEfetivo = efetivo;           
     }
 
     /**
@@ -141,7 +155,7 @@ public class PopUp_NovoMecanico1eft extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        new PopUp_NovoMecanico2().setVisible(true);
+        new PopUp_NovoMecanico2(novoEfetivo()).setVisible(true);    
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -429,7 +443,7 @@ public class PopUp_NovoMecanico1eft extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PopUp_NovoMecanico1eft().setVisible(true);
+                //new PopUp_NovoMecanico1eft().setVisible(true);
             }
         });
     }
