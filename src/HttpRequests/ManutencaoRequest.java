@@ -13,17 +13,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import models.Constant;
-import models.Pecas;
+import models.Servico;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpResponse.BodyHandlers;
 
-public class PecasRequest {
+public class ManutencaoRequest {
     
-    public void setPecas(Pecas peca) throws IOException, InterruptedException{
+    public void setServicos(Servico servico) throws IOException, InterruptedException{
         String msg = null;
         Gson gson = new Gson();
-        String requestBody = gson.toJson(peca);
-        String uri = Constant.domain.DOMAIN + "/api/pecas/registar_pecas";
+        String requestBody = gson.toJson(servico);
+        String uri = Constant.domain.DOMAIN + "/api/servico/registar_servico";
         
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -34,17 +35,20 @@ public class PecasRequest {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println("chegou em atualiazr efetivo " + response.body());
+        
     }
 
-    public List<Pecas> getPecas(String biCoordenador) {
+    public List<Servico> getServicos() {
 
         String msg = null;
-        List<Pecas> pecas = new ArrayList<>();
-        String uri = Constant.domain.DOMAIN + "/api/pecas/listar_pecas_disponiveis/";
+        List<Servico> servico = new ArrayList<>();
+        String uri = Constant.domain.DOMAIN + "/api/servico/listar_servicos";
 
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
-                .uri(URI.create(uri + biCoordenador))
+                .uri(URI.create(uri))
                 .header("accept", "application/json")
                 .build();
 
@@ -54,20 +58,20 @@ public class PecasRequest {
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
             msg = response.body();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Erro de Conexão1!!");
+            Logger.getLogger(Perfil.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InterruptedException ex) {
-            JOptionPane.showMessageDialog(null, "Erro de Conexão2!!");
+            Logger.getLogger(Perfil.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         if (msg != null) {
             var gson = new Gson();
-            Type pecasList = new TypeToken<ArrayList<Pecas>>() {}.getType();
-            pecas = gson.fromJson(msg, pecasList);
+            Type servicosList = new TypeToken<ArrayList<Servico>>() {}.getType();
+            servico = gson.fromJson(msg, servicosList);
 
-            if (pecas.isEmpty()) {
-                pecas = null;
+            if (servico.isEmpty()) {
+                servico = null;
             }
         }
-        return pecas;
+        return servico;
     }
 }

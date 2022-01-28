@@ -470,7 +470,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         resetColor(jPanel4);
         resetColor(jPanel5);
         resetColor(jPanel6);
-        new SwitchMenu(ContentPane, new Marcacao());
+        new SwitchMenu(ContentPane, new marcacao());
     }//GEN-LAST:event_jPanel7MouseClicked
 
     public void setColor (JPanel panel){
