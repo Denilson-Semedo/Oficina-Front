@@ -5,25 +5,60 @@
  */
 package MenuContents;
 
+import HttpRequests.ServicosRequest;
+import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
+import models.Pecas;
+import models.Servico;
 
 /**
  *
  * @author Denilson
  */
 public class servicos extends javax.swing.JPanel {
+    
+    private ServicosRequest servicos_request = new ServicosRequest();
+    private List<Servico> listaServicos = new ArrayList<>();
 
     /**
      * Creates new form Perfil
      */
     public servicos() {
         initComponents();
+        jTable3.getTableHeader().setFont(new Font("Quicksand Medium", 0, 15));
+        if(preencherTabela()){
+            //
+        }
     }
+    
+    public boolean preencherTabela() {
 
+        boolean msg = false;
+
+        listaServicos = servicos_request.getServicos();
+
+        if (listaServicos != null) {
+            DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+            model.getDataVector().removeAllElements();
+            listaServicos.forEach((valor) -> {
+
+                model.addRow(new Object[]{valor.getNome()});
+
+            });
+            msg = true;
+        } else {
+            msg = false;
+        }
+        return msg;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,22 +87,38 @@ public class servicos extends javax.swing.JPanel {
         jTable3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"", null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null},
+                {null},
+                {null},
+                {null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3"
+                "Nome Serviço"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable3.getTableHeader().setResizingAllowed(false);
+        jTable3.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(jTable3);
 
         jButton4.setBackground(new java.awt.Color(8, 32, 50));
         jButton4.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Adicionar Serviço");
-        jButton4.setActionCommand("Adicionar Serviço");
         jButton4.setBorder(null);
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
