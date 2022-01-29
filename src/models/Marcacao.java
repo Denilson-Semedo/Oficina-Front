@@ -28,6 +28,10 @@ public class Marcacao {
         this.cliente = cliente;
         this.oficina = oficina;
     }
+    
+    public Marcacao() {
+        
+    }
 
     public int getId_marcacao() {
         return id_marcacao;

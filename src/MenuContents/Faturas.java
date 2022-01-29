@@ -5,15 +5,19 @@
  */
 package MenuContents;
 
+import HttpRequests.FaturaRequest;
 import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
+import models.Fatura;
 
 /**
  *
@@ -24,7 +28,11 @@ public class Faturas extends javax.swing.JPanel {
     /**
      * Creates new form Perfil
      */
-    public void preencherTabela() {
+    
+    private FaturaRequest fatura_request = new FaturaRequest();
+    private List<Fatura> listaFatura = new ArrayList<>();
+    
+    /*public void preencherTabela() {
         String colunas[] = {"Mês da faturação", "Total faturado"};
         Object dados[][] = {
             {"Janeiro", "200000"},
@@ -43,17 +51,31 @@ public class Faturas extends javax.swing.JPanel {
 
         DefaultTableModel model = new DefaultTableModel(dados, colunas);
         jTable3.setModel(model);
+    }*/
+    
+    public boolean preencherTabela() {
+
+        boolean msg = false;
+
+        listaFatura = fatura_request.getFatura();
+
+        if (listaFatura != null) {
+            DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+            model.getDataVector().removeAllElements();
+            listaFatura.forEach((valor) -> {
+
+                //model.addRow(new Object[]{valor.});
+
+            });
+            msg = true;
+        } else {
+            msg = false;
+        }
+        return msg;
     }
 
     public Faturas() {
         initComponents();
-        jTable3.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-            public void valueChanged(ListSelectionEvent event) {
-                // do some actions here, for example
-                // print first column value from selected row
-                System.out.println(jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString());
-            }
-        });
         jTable3.getTableHeader().setFont(new Font("Quicksand Medium", 0, 15));
         //jTable3.setEnabled(false);
         preencherTabela();

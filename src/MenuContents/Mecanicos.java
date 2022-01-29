@@ -56,7 +56,11 @@ public class Mecanicos extends javax.swing.JPanel {
         jTable3.setModel(model);
     }*/
     
+    private MecanicoRequest mecanico_request = new MecanicoRequest();
+    private List<Mecanico> listaServicos = new ArrayList<>();
+    
     public void preencherTabela(){
+        
         
     }
     
@@ -169,7 +173,7 @@ public class Mecanicos extends javax.swing.JPanel {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        new PopUp_NovoMecanico().setVisible(true);
+        new novoMecanico().setVisible(true);
         //new PopUp_NovaPeca().setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }//GEN-LAST:event_jButton4ActionPerformed
 

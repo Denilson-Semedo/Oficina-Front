@@ -13,6 +13,6 @@ public class Constant {
     }
     
     public class domain {
-        public static final String DOMAIN = "http://localhost:8080";
+        public static final String DOMAIN = "http://localhost:8090";
     }
 }

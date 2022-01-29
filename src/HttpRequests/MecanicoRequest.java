@@ -10,15 +10,15 @@ import java.net.http.HttpResponse;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import models.Constant;
-import models.Estagiario;
+import models.Efetivo;
 
-public class EstagiarioRequest {
+public class MecanicoRequest {
     
-    public void setEstagiario(Estagiario estagiario){
+    public void setEfetivo(Efetivo efetivo){
         String msg = null;
         Gson gson = new Gson();
-        String requestBody = gson.toJson(estagiario);
-        String uri = Constant.domain.DOMAIN + "/api/estagiario/registar_estagiario";
+        String requestBody = gson.toJson(efetivo);
+        String uri = Constant.domain.DOMAIN + "/api/efetivo/registar_efetivo";
         
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -28,22 +28,20 @@ public class EstagiarioRequest {
                 .header("Content-Type", "application/json")
                 .build();
 
-        
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException ex) {
-            Logger.getLogger(EstagiarioRequest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MecanicoRequest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InterruptedException ex) {
-            Logger.getLogger(EstagiarioRequest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MecanicoRequest.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
 
-    public Estagiario getInfoEfetivo(String username) {
+    public Efetivo getInfoEfetivo(String username) {
 
         String msg = null;
-        Estagiario estagiario = null;
-        String uri = Constant.domain.DOMAIN + "/api/estagiario/get_estagiario_by_username/";
+        Efetivo efetivo = null;
+        String uri = Constant.domain.DOMAIN + "/api/efetivo/get_efetivo_by_username/";
 
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
@@ -56,7 +54,6 @@ public class EstagiarioRequest {
         try {
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
             msg = response.body();
-
         } catch (IOException ex) {
             Logger.getLogger(Perfil.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InterruptedException ex) {
@@ -65,16 +62,16 @@ public class EstagiarioRequest {
 
         if (msg != null) {
             var gson = new Gson();
-            estagiario = gson.fromJson(msg, models.Estagiario.class);
+            efetivo = gson.fromJson(msg, models.Efetivo.class);
         }
-        return estagiario;
+        return efetivo;
     }
-    
-    public void atualizarPerfilMecanicoEstagiario(Estagiario estagiario, boolean passwordChange) throws IOException, InterruptedException {
+
+    public void atualizarPerfilMecanicoEfetivo(Efetivo efetivo, boolean passwordChange) throws IOException, InterruptedException {
 
         Gson gson = new Gson();
-        String requestBody = gson.toJson(estagiario);
-        String uri = Constant.domain.DOMAIN + "/api/estagiario/atualizar_estagiario/";
+        String requestBody = gson.toJson(efetivo);
+        String uri = Constant.domain.DOMAIN + "/api/efetivo/atualizar_efetivo/";
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -86,6 +83,6 @@ public class EstagiarioRequest {
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.println(response.body());
+        System.out.println("chegou em atualiazr efetivo " + response.body());
     }
 }

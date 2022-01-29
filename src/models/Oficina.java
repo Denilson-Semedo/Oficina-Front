@@ -28,6 +28,10 @@ public class Oficina {
         this.servicos = servicos;
     }
 
+    public Oficina() {
+    
+    }
+
     public int getId_oficina() {
         return id_oficina;
     }
