@@ -5,15 +5,19 @@
  */
 package MenuContents;
 
+import HttpRequests.MecanicoRequest;
 import java.awt.Font;
 import java.awt.Image;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
+import models.Mecanico;
 
 /**
  *
@@ -57,11 +61,26 @@ public class Mecanicos extends javax.swing.JPanel {
     }*/
     
     private MecanicoRequest mecanico_request = new MecanicoRequest();
-    private List<Mecanico> listaServicos = new ArrayList<>();
+    private List<Mecanico> listaMecanico = new ArrayList<>();
     
-    public void preencherTabela(){
-        
-        
+    public boolean preencherTabela(){
+        boolean msg = false;
+
+        listaMecanico = mecanico_request.getMecanico();
+
+        if (listaMecanico != null) {
+            DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+            model.getDataVector().removeAllElements();
+            listaMecanico.forEach((valor) -> {
+
+                model.addRow(new Object[]{valor.getNome(),valor.getSobrenome(),valor.getEmail(),valor.getTelemovel(),valor.getMorada(),"-","-","-","-","-","-"});
+
+            });
+            msg = true;
+        } else {
+            msg = false;
+        }
+        return msg;
     }
     
     public Mecanicos() {

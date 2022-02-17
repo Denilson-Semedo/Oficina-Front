@@ -11,6 +11,10 @@ public class Tipo_Utilizador {
         this.nome = nome;
     }
 
+    public Tipo_Utilizador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getId_tipo_utilizador() {
         return id_tipo_utilizador;
     }

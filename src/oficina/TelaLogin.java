@@ -5,8 +5,17 @@
  */
 package oficina;
 
+import HttpRequests.UtilizadorRequest;
+import java.awt.Cursor;
 import java.awt.Image;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import models.AuthData;
+import models.Constant;
+import models.Tipo_Utilizador;
+import models.Utilizador;
 
 /**
  *
@@ -17,20 +26,69 @@ public class TelaLogin extends javax.swing.JFrame {
     /**
      * Creates new form TelaLogin
      */
-    
+
     public void ajustar_logo(){
-        ImageIcon icon = new ImageIcon("C:\\Users\\Denilson\\Documents\\NetBeansProjects\\Oficina\\src\\oficina\\imagens\\carLogo2.png");
+        ImageIcon icon = new ImageIcon("./imagens/carLogo2.png");
         Image img = icon.getImage();
         Image foto = img.getScaledInstance(jLabel5.getWidth(), jLabel5.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon foto_ajustada = new ImageIcon(foto);
         jLabel5.setIcon(foto_ajustada);
     }
-    
+    static List<Tipo_Utilizador> getTipo_uti = new ArrayList();
+    static Tipo_Utilizador tipo_uti = new Tipo_Utilizador();
+    static Utilizador uti_atual = null;
+    private UtilizadorRequest utilizador_request = new UtilizadorRequest();
+
     public TelaLogin() {
         initComponents();
         ajustar_logo();
     }
 
+    public static List<Tipo_Utilizador> getGetTipo_uti() {
+        return getTipo_uti;
+    }
+
+    public static void setGetTipo_uti(List<Tipo_Utilizador> getTipo_uti) {
+        TelaLogin.getTipo_uti = getTipo_uti;
+    }
+
+    public static Tipo_Utilizador getTipo_uti() {
+        return tipo_uti;
+    }
+
+    public static void setTipo_uti(Tipo_Utilizador tipo_uti) {
+        TelaLogin.tipo_uti = tipo_uti;
+    }
+
+    public static Utilizador getUti_atual() {
+        return uti_atual;
+    }
+
+    public static void setUti_atual(Utilizador uti_atual) {
+        TelaLogin.uti_atual = uti_atual;
+    }
+
+    public boolean validacaoDeCampos() {
+
+        boolean msg = false;
+
+        String senha = String.valueOf(passwordTxt.getText());
+
+        if (usernameTxt.getText().equals("") && senha.equals("")) {
+            JOptionPane.showMessageDialog(null, "Preencha os campos!!");
+            msg = false;
+        } else if (usernameTxt.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Campo username vazio!!");
+            msg = false;
+        } else if (senha.equals("")) {
+            JOptionPane.showMessageDialog(null, "Campo password vazio!!");
+            msg = false;
+        } else {
+            msg = true;
+        }
+        return msg;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,13 +106,13 @@ public class TelaLogin extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        user = new javax.swing.JTextField();
+        usernameTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         Logar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        user1 = new javax.swing.JTextField();
+        passwordTxt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(829, 421));
@@ -102,20 +160,19 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel2.setText("Bem-Vindo");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
-        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 213, 290, 10));
 
-        user.setBackground(new java.awt.Color(8, 32, 50));
-        user.setForeground(new java.awt.Color(255, 255, 255));
-        user.setBorder(null);
-        user.setCaretColor(new java.awt.Color(255, 255, 255));
-        user.addActionListener(new java.awt.event.ActionListener() {
+        usernameTxt.setBackground(new java.awt.Color(8, 32, 50));
+        usernameTxt.setForeground(new java.awt.Color(255, 255, 255));
+        usernameTxt.setBorder(null);
+        usernameTxt.setCaretColor(new java.awt.Color(255, 255, 255));
+        usernameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userActionPerformed(evt);
+                usernameTxtActionPerformed(evt);
             }
         });
-        jPanel3.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 290, 30));
+        jPanel3.add(usernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 290, 30));
 
         jLabel3.setFont(new java.awt.Font("Quicksand Medium", 0, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -148,20 +205,19 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel1.setText("Imagen ILUSTRATIVA");
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(547, 256, 1040, 560));
 
-        jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 290, 10));
 
-        user1.setBackground(new java.awt.Color(8, 32, 50));
-        user1.setForeground(new java.awt.Color(255, 255, 255));
-        user1.setBorder(null);
-        user1.setCaretColor(new java.awt.Color(255, 255, 255));
-        user1.addActionListener(new java.awt.event.ActionListener() {
+        passwordTxt.setBackground(new java.awt.Color(8, 32, 50));
+        passwordTxt.setForeground(new java.awt.Color(255, 255, 255));
+        passwordTxt.setBorder(null);
+        passwordTxt.setCaretColor(new java.awt.Color(255, 255, 255));
+        passwordTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                user1ActionPerformed(evt);
+                passwordTxtActionPerformed(evt);
             }
         });
-        jPanel3.add(user1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 290, 30));
+        jPanel3.add(passwordTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 290, 30));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -197,9 +253,9 @@ public class TelaLogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
+    private void usernameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_userActionPerformed
+    }//GEN-LAST:event_usernameTxtActionPerformed
 
     private void LogarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogarMouseClicked
         // TODO add your handling code here:
@@ -207,12 +263,61 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void LogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogarActionPerformed
         // TODO add your handling code here:
+        /*if (validacaoDeCampos()) {
+            setCursor(Cursor.WAIT_CURSOR);
+
+            String senha = String.valueOf(passwordTxt.getText());
+            
+            String token = utilizador_request.loginUti(usernameTxt.getText(), senha);
+//            String token = utilizador_request.loginUti("Joananita6574", "na6574");
+            AuthData.token = token;
+
+            uti_atual = utilizador_request.GetUser(usernameTxt.getText());
+
+            if (uti_atual != null) {
+
+//                getTipo_uti = utilizador_request.getTipoUti(usernameTxt.getText());
+                AuthData.user = uti_atual;
+                
+                getTipo_uti = uti_atual.getTipo_utilizador();
+
+                if (getTipo_uti != null) {
+
+                    if (getTipo_uti.get(0).getNome().equals(Constant.UserTypes.MECANICO)) {
+
+                        tipo_uti = new Tipo_Utilizador(getTipo_uti.get(0).getId_tipo_utilizador(), getTipo_uti.get(0).getNome());
+                        
+                        new TelaPrincipalMecanico().setVisible(true);
+                        this.setVisible(false);
+//                        setCursor(Cursor.DEFAULT_CURSOR);
+
+                    } else if (getTipo_uti.get(0).getNome().equals(Constant.UserTypes.COORDENADOR)) {
+
+                        tipo_uti = new Tipo_Utilizador(getTipo_uti.get(0).getId_tipo_utilizador(), getTipo_uti.get(0).getNome());
+                        
+                        new TelaPrincipal().setVisible(true);
+                        this.setVisible(false);
+//                        setCursor(Cursor.DEFAULT_CURSOR);
+
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Esse perfil de uti não pertence ao coordenador e nem ao mecanico!!");
+                    }
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "erro login!!");
+            }
+        }*/
     }//GEN-LAST:event_LogarActionPerformed
 
-    private void user1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user1ActionPerformed
+    private void passwordTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_user1ActionPerformed
+    }//GEN-LAST:event_passwordTxtActionPerformed
 
+    public void setCursor (int type){
+        Cursor cursor = new Cursor(type);
+        this.setCursor(cursor);
+        this.setVisible(true);
+    }
     /**
      * @param args the command line arguments
      */
@@ -239,6 +344,7 @@ public class TelaLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -262,7 +368,7 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField user;
-    private javax.swing.JTextField user1;
+    private javax.swing.JTextField passwordTxt;
+    private javax.swing.JTextField usernameTxt;
     // End of variables declaration//GEN-END:variables
 }
